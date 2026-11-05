@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="assets/img/logo-sm.webp">
+<title>أسطول المشاريع</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="أسطول المشاريع للمقاولات العامة والنقليات، الرياض، منذ 2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Readex+Pro:wght@300;400;500&display=swap">
+
+<style>/* Projects OSTUL: a white company profile. Real project film and photos on a clean page. */
+:root{
+  --bg:#fff; --paper:#f5f4f0; --ink:#0c1222; --ink-2:#596072; --hair:rgba(12,18,34,.1);
+  --night:#05070d; --gold:#e8b400; --gold-ink:#8f6a00; --navy:#0d2a66;
+  --f-d:"Alexandria","Readex Pro","Segoe UI",Tahoma,sans-serif; --f:"Readex Pro","Segoe UI",Tahoma,sans-serif;
+  --gl:max(clamp(20px,6vw,120px),env(safe-area-inset-left,0px)); --gr:max(clamp(20px,6vw,120px),env(safe-area-inset-right,0px));
+  --sec:clamp(96px,11vw,170px);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scrollbar-width:thin;scrollbar-color:rgba(120,125,140,.45) transparent}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-weight:300;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:7px;height:7px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(120,125,140,.42);border-radius:8px}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:3px}
+::selection{background:var(--gold);color:var(--ink)}
+.num{font-family:var(--f-d);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.lt{direction:ltr;unicode-bidi:isolate}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:1360px;margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+.eyebrow{margin:0 0 18px;font-size:13px;font-weight:500;letter-spacing:.06em;color:var(--gold-ink)}
+.eyebrow.c{text-align:center}
+.h2{margin:0;max-width:18em;font-family:var(--f-d);font-weight:500;font-size:clamp(28px,3.1vw,50px);line-height:1.3;letter-spacing:-.015em;text-wrap:balance}
+.wsplit .w{display:inline-block}
+
+/* ---------- header: logo always in place, no frame ---------- */
+.hdr{position:fixed;inset-inline:0;top:0;z-index:50;padding-top:env(safe-area-inset-top,0px)}
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(255,255,255,.9);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--hair);opacity:0;transition:opacity .5s}
+.hdr.lite::before{opacity:1}
+.hdr .in{max-width:1360px;height:82px;margin-inline:auto;padding-inline:var(--gl) var(--gr);display:flex;align-items:center;justify-content:space-between;gap:18px;color:#fff;transition:color .5s,height .5s}
+.hdr.lite .in{color:var(--ink);height:70px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:56px;height:56px}
+.brand b{font-family:var(--f-d);font-weight:600;font-size:16px;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:clamp(14px,1.7vw,28px);font-size:14px}
+.nav > a,.dd > button{display:inline-flex;align-items:center;gap:6px;height:40px;position:relative;opacity:.88;transition:opacity .3s}
+.nav > a:hover,.dd > button:hover,.nav .on{opacity:1}
+.nav > a::after,.dd > button::after{content:"";position:absolute;inset-inline:0;bottom:6px;height:1.5px;background:var(--gold);transform:scaleX(0);transition:transform .5s var(--ease)}
+.nav .on::after,.nav > a:hover::after{transform:scaleX(1)}
+.dd{position:relative}
+.dd svg{width:11px;height:11px;transition:transform .4s var(--ease)}
+.dd:hover svg,.dd.open svg{transform:rotate(180deg)}
+.dd-m{position:absolute;top:100%;inset-inline-start:-16px;min-width:240px;padding:10px;display:grid;background:#fff;color:var(--ink);border-radius:12px;box-shadow:0 24px 60px -20px rgba(12,18,34,.28),0 0 0 1px var(--hair);opacity:0;visibility:hidden;translate:0 8px;transition:opacity .3s,translate .4s var(--ease),visibility .3s}
+.dd:hover .dd-m,.dd:focus-within .dd-m,.dd.open .dd-m{opacity:1;visibility:visible;translate:0 0}
+.dd.shut .dd-m{opacity:0!important;visibility:hidden!important}
+.dd-m a{padding:10px 12px;border-radius:8px;font-size:14px;transition:background .25s}
+.dd-m a:hover{background:var(--paper)}
+.tools{display:flex;align-items:center;gap:8px}
+.lang{height:36px;min-width:40px;padding-inline:10px;border-radius:8px;font-size:12.5px;font-weight:500;border:1px solid rgba(255,255,255,.35);transition:border-color .5s}
+.hdr.lite .lang{border-color:var(--hair)}
+.pill{display:inline-flex;align-items:center;height:38px;padding-inline:18px;border-radius:999px;background:var(--gold);color:var(--ink);font-size:13.5px;font-weight:500;transition:transform .3s var(--ease),box-shadow .3s}
+.pill:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(232,180,0,.8)}
+.burger{display:none;width:40px;height:40px;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:1.5px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger i:first-child{top:15px}.burger i:last-child{top:24px}
+.menu-open .burger i:first-child{top:19.5px;transform:rotate(45deg)}.menu-open .burger i:last-child{top:19.5px;transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:45;background:#fff;color:var(--ink);padding:calc(100px + env(safe-area-inset-top,0px)) var(--gr) 40px var(--gl);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu-open .hdr .in{color:var(--ink)}
+.menu nav{display:grid}
+.menu nav > a{font-family:var(--f-d);font-size:23px;font-weight:500;padding:12px 0;border-bottom:1px solid var(--hair)}
+.m-g{margin:18px 0 4px;font-size:12.5px;font-weight:500;letter-spacing:.06em;color:var(--gold-ink)}
+.m-sub{display:grid;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+.m-sub a{font-family:var(--f-d);font-size:18px;padding:8px 0}
+.m-wa{margin-top:30px;display:grid;gap:4px}
+.m-wa span{font-size:13px;color:var(--ink-2)}
+.m-wa b{font-family:var(--f-d);font-size:22px;font-weight:500}
+@media(max-width:1120px){.nav{display:none}.burger{display:block}.hdr .pill{display:none}}
+@media(max-width:760px){.brand b{font-size:15px}.brand img{width:48px;height:48px}.hdr .in{height:68px}.hdr.lite .in{height:62px}}
+
+/* ---------- the film runs behind the whole page; the reader scrolls over it ---------- */
+html,body{background:var(--night)}
+.bgfilm{position:fixed;inset:0;height:100lvh;z-index:0;pointer-events:none;background:var(--night)}
+.film-poster,#fc{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+#fc{opacity:0;transition:opacity 1.2s ease}
+#fc.on{opacity:1}
+.shade{position:absolute;inset:0;background:radial-gradient(130% 100% at 50% 45%,rgba(5,7,13,.05) 0%,rgba(5,7,13,.45) 100%)}
+main,.ftr{position:relative;z-index:1}
+.hdr{z-index:50}
+
+/* the opening screen: clear film, the name and the line */
+.film{height:100svh;min-height:560px;position:relative;color:#fff}
+.cap{position:absolute;inset-inline:0;bottom:clamp(48px,9vh,100px);padding-inline:var(--gl) var(--gr);display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-logo{width:clamp(84px,7vw,104px);height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4))}
+.hero-name{margin:clamp(14px,1.8vw,22px) 0 0;font-family:var(--f-d);font-weight:500;font-size:clamp(15px,1.2vw,19px);color:rgba(255,255,255,.9);text-shadow:0 1px 16px rgba(0,0,0,.4)}
+.cap-t{margin:0;max-width:16em;font-family:var(--f-d);font-weight:500;font-size:clamp(30px,4vw,64px);line-height:1.22;letter-spacing:-.02em;color:#fff;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.c0 .cap-t{margin-top:clamp(18px,2.4vw,30px)}
+
+/* clear windows: the film shows through, one line each */
+.win{position:relative;min-height:120svh;display:flex;align-items:center;justify-content:center;padding:0 var(--gr) 0 var(--gl);text-align:center;color:#fff}
+.win .cap-t .w{opacity:.15;transition:opacity .25s}
+.win .cap-t .w.hi{opacity:1}
+.still .win .cap-t .w{opacity:1}
+
+/* fog: white frosted glass that rolls in and out over the film */
+.fog{position:relative;isolation:isolate}
+.fog::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(22px) saturate(1.25);backdrop-filter:blur(22px) saturate(1.25);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%)}
+.fog > section,.fog > div{background:transparent!important}
+.fog .card figure,.fog .pj-ph{box-shadow:0 20px 50px -30px rgba(12,18,34,.45)}
+.fog .vals div,.fog .creds div{background:rgba(255,255,255,.7)}
+.fog .ksa .land{fill:rgba(255,255,255,.55)}
+.fog .ksa .cty{stroke:rgba(255,255,255,.9)}
+.fog .tags li{background:rgba(12,18,34,.06)}
+.fogf::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.ftr{isolation:isolate}
+
+/* contact sits on the film under a dark veil */
+.contact{background:linear-gradient(180deg,rgba(5,7,13,0) 0%,rgba(5,7,13,.6) 30%,rgba(5,7,13,.7) 100%)!important}
+
+@media (max-width:700px){
+  .cap-t{font-size:clamp(26px,7.8vw,38px)}
+  .hero-logo{width:84px}.hero-name{font-size:14px;max-width:20em}
+  .win{min-height:100svh}
+  .fog::before{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 90px,#000 calc(100% - 90px),transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 90px,#000 calc(100% - 90px),transparent 100%)}
+}
+
+/* ---------- statement and numbers ---------- */
+.intro{padding-block:var(--sec) calc(var(--sec) * .8)}
+.big{margin:0 auto;max-width:17em;text-align:center;font-family:var(--f-d);font-weight:500;font-size:clamp(28px,3.6vw,58px);line-height:1.35;letter-spacing:-.015em;text-wrap:balance}
+.motion .big .w{color:rgba(12,18,34,.16);transition:color .3s}
+.motion .big .w.hi{color:var(--ink)}
+.stats{margin:clamp(60px,7vw,100px) auto 0;max-width:1100px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hair)}
+.stats div{padding:30px 20px 0;text-align:center}
+.stats div + div{border-inline-start:1px solid var(--hair)}
+.stats b{display:block;font-family:var(--f-d);font-weight:400;font-size:clamp(38px,4.4vw,64px);line-height:1;color:var(--ink)}
+.stats small{font-size:.45em;margin-inline-start:4px;color:var(--gold-ink)}
+.stats span{display:block;margin-top:12px;font-size:14px;color:var(--ink-2)}
+
+/* ---------- about ---------- */
+.about{padding-block:calc(var(--sec) * .6) var(--sec)}
+.ab-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,110px);align-items:center}
+.ab-lead{margin:26px 0 0;font-family:var(--f-d);font-weight:400;font-size:clamp(18px,1.5vw,22px);line-height:1.9;color:var(--ink)}
+.ab-p{margin:16px 0 0;max-width:34em;font-size:clamp(15px,1.1vw,17px);line-height:1.95;color:var(--ink-2)}
+.ab-ph{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:18px}
+.ab-ph img{width:100%;height:100%;object-fit:cover}
+.vm{margin-top:clamp(70px,8vw,120px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.4vw,56px)}
+.vm > div{padding-top:24px;border-top:1px solid var(--hair)}
+.vm .num{font-size:12px;color:var(--gold-ink)}
+.vm h3{margin:8px 0 10px;font-family:var(--f-d);font-weight:500;font-size:clamp(20px,1.7vw,25px)}
+.vm p{margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.95;color:var(--ink-2)}
+
+/* ---------- services: each opens on its own film, then the fleet behind it ---------- */
+.services{padding-top:calc(var(--sec) * .7);background:var(--paper)}
+.sv-top{text-align:center}.sv-top .h2{margin-inline:auto}
+.svc{padding-top:clamp(70px,8vw,120px)}
+.svc:last-child{padding-bottom:var(--sec)}
+.svc-head{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px clamp(18px,3vw,48px);align-items:baseline}
+.svc-head .num{font-size:13px;color:var(--gold-ink)}
+.svc-t{margin:0;font-family:var(--f-d);font-weight:500;font-size:clamp(26px,2.6vw,42px);line-height:1.3;letter-spacing:-.01em}
+.svc-head p{margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.9;color:var(--ink-2)}
+.svc-v{position:relative;margin-top:clamp(26px,3vw,44px);height:min(78svh,50vw);overflow:hidden;background:var(--paper);-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 5%,#000 95%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
+.svc-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cards{margin-top:clamp(30px,3.6vw,56px);display:grid;gap:clamp(16px,2vw,32px)}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
+.card figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:14px;background:#e9e7e1}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.card:hover img{transform:scale(1.04)}
+.card h4{margin:20px 0 6px;font-family:var(--f-d);font-weight:500;font-size:clamp(18px,1.4vw,22px)}
+.card p{margin:0;font-size:15px;line-height:1.85;color:var(--ink-2)}
+
+/* ---------- from the field: real photos drifting by ---------- */
+.field{padding-block:var(--sec) 0;overflow:hidden}
+.fd{display:flex;width:max-content;gap:14px;direction:ltr;animation:mq 80s linear infinite;animation-play-state:paused}
+.fd.run{animation-play-state:running}
+.fd img{height:clamp(220px,28vw,400px);width:auto;border-radius:14px;object-fit:cover}
+.fd{-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- projects ---------- */
+.work{padding-block:var(--sec)}
+.pjs{margin-top:clamp(44px,5vw,80px);display:grid;grid-template-columns:repeat(2,1fr);column-gap:clamp(24px,3.4vw,60px);row-gap:clamp(48px,5.6vw,90px)}
+.pj-ph{aspect-ratio:4/3;overflow:hidden;border-radius:16px;background:#e9e7e1}
+.pj-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.8s var(--ease)}
+.pj:hover .pj-ph img{transform:scale(1.035)}
+.pj-tx{padding-top:22px}
+.pj-tx .num{display:block;margin-bottom:8px;font-size:12px;color:var(--gold-ink)}
+.pj-tx h3{margin:0 0 6px;font-family:var(--f-d);font-weight:500;font-size:clamp(21px,1.9vw,29px);line-height:1.35}
+.pj-tx p{margin:0;max-width:30em;font-size:clamp(15px,1.05vw,17px);line-height:1.9;color:var(--ink-2)}
+.tags{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{font-size:12.5px;padding:5px 12px;border-radius:999px;background:var(--paper);color:var(--ink)}
+
+/* ---------- safety and quality ---------- */
+.quality{padding-block:var(--sec);background:var(--paper)}
+.vals{margin-top:clamp(44px,5vw,80px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
+.vals div{padding:clamp(24px,2.6vw,36px);border-radius:16px;background:#fff}
+.vals .num{font-size:12px;color:var(--gold-ink)}
+.vals h4{margin:10px 0 8px;font-family:var(--f-d);font-weight:500;font-size:clamp(19px,1.5vw,23px)}
+.vals p{margin:0;font-size:15px;line-height:1.9;color:var(--ink-2)}
+.creds{margin-top:clamp(16px,2vw,28px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
+.creds div{padding:22px clamp(24px,2.6vw,36px);border-top:2px solid var(--gold);background:#fff;border-radius:0 0 16px 16px}
+.creds b{display:block;font-family:var(--f-d);font-weight:500;font-size:clamp(15px,1.15vw,17px)}
+.creds span{display:block;margin-top:4px;font-size:13.5px;color:var(--ink-2)}
+
+/* ---------- leadership: short words, faces on white ---------- */
+.lead{padding-block:var(--sec)}
+.leaders{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,5vw,90px)}
+.msg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(18px,2.4vw,36px);align-items:end}
+.msg-ph{margin:0;aspect-ratio:4/5;-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent);mask-image:linear-gradient(180deg,#000 82%,transparent)}
+.msg-ph img{width:100%;height:100%;object-fit:contain;object-position:50% 100%}
+.msg-tx{padding-bottom:clamp(10px,2vw,30px)}
+.q{margin:0;font-family:var(--f-d);font-weight:400;font-size:clamp(18px,1.55vw,23px);line-height:1.8;color:var(--ink)}
+.q::before{content:"";display:block;width:34px;height:2px;margin-bottom:18px;background:var(--gold)}
+.sig{margin:22px 0 0;display:grid;gap:2px}
+.sig b{font-family:var(--f-d);font-weight:600;font-size:17px}
+.sig span{font-size:13.5px;color:var(--gold-ink)}
+.team{margin-top:clamp(70px,8vw,120px);padding-top:30px;border-top:1px solid var(--hair);display:grid;grid-template-columns:auto 1fr;gap:20px 40px;align-items:baseline}
+.team h3{margin:0;font-size:13px;font-weight:500;letter-spacing:.06em;color:var(--gold-ink)}
+.team ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;row-gap:10px}
+.team li{font-family:var(--f-d);font-size:clamp(16px,1.3vw,19px);padding-inline:clamp(10px,1.4vw,20px)}
+.team li:first-child{padding-inline-start:0}
+.team li + li{border-inline-start:1px solid var(--hair)}
+
+/* ---------- journey ---------- */
+.journey{padding-block:0 var(--sec)}
+.tl{margin:10px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.tl::before{content:"";position:absolute;inset-inline:0;top:9px;height:1px;background:var(--hair)}
+.tl li{position:relative;padding-top:36px;padding-inline-end:20px}
+.tl li::before{content:"";position:absolute;top:4px;inset-inline-start:0;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--gold)}
+.tl b{display:block;font-family:var(--f-d);font-weight:500;font-size:clamp(26px,2.4vw,36px);line-height:1}
+.tl span{display:block;margin-top:10px;font-size:15px;color:var(--ink-2)}
+
+/* ---------- map ---------- */
+.map{padding-block:var(--sec);background:var(--paper);overflow:hidden}
+.map-in{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(30px,5vw,90px);align-items:center}
+.ksa{width:100%;height:auto;max-height:80svh;overflow:visible}
+.ksa .land{fill:rgba(255,255,255,.7);stroke:rgba(12,18,34,.3);stroke-width:1.4;stroke-linejoin:round}
+.ksa .route{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linecap:round}
+.ksa .rdot{fill:var(--navy);transition:opacity .4s}
+.ksa .pulse{fill:var(--gold);opacity:0}
+.ksa .hub{fill:var(--gold)}
+.ksa .hub-ring{fill:none;stroke:var(--gold);stroke-width:1.6;transform-box:fill-box;transform-origin:center;animation:ring 2.6s var(--ease) infinite}
+@keyframes ring{0%{transform:scale(.4);opacity:1}100%{transform:scale(2.2);opacity:0}}
+.ksa .cty{fill:var(--ink);font-family:var(--f-d);font-size:24px;font-weight:400;paint-order:stroke;stroke:var(--paper);stroke-width:5px}
+.ksa .hub-l{fill:var(--ink);font-size:30px;font-weight:600}
+
+/* ---------- partners ---------- */
+.partners{padding-block:var(--sec) calc(var(--sec) * .8)}
+.partners .h2{margin:0 auto clamp(44px,5vw,70px);text-align:center}
+.marq{display:grid;gap:clamp(28px,3.4vw,52px);direction:ltr;justify-items:start;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq .t{display:flex;width:max-content;gap:clamp(56px,6vw,110px);align-items:center;animation:mq 60s linear infinite;animation-play-state:paused}
+.marq .t.b{animation-direction:reverse;animation-duration:70s}
+.marq.run .t{animation-play-state:running}
+.marq .pl{display:flex;align-items:center}
+.marq img{filter:grayscale(1);opacity:.62;transition:filter .4s,opacity .4s}
+.marq img:hover{filter:none;opacity:1}
+
+/* ---------- contact: over a film of the road ---------- */
+.contact{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding-block:clamp(120px,14vw,210px);background:var(--night);text-align:center}
+.ct-v{position:absolute;inset:0;z-index:-1}
+.ct-v img{width:100%;height:100%;object-fit:cover;animation:kb 30s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.08)}}
+.ct-v::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,13,.55),rgba(5,7,13,.72))}
+.ct-logo{width:clamp(96px,10vw,140px);height:auto;margin:0 auto clamp(26px,3vw,40px)}
+.ct-h{margin:0;font-family:var(--f-d);font-weight:500;font-size:clamp(34px,4.6vw,74px);line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
+.ct-sub{margin:18px auto 0;max-width:30em;font-size:clamp(16px,1.25vw,19px);line-height:1.9;color:rgba(255,255,255,.78)}
+.ct-lines{margin:clamp(44px,5vw,70px) auto 0;max-width:860px;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,2vw,24px);text-align:start}
+.ct-lines a{display:grid;gap:6px;padding:20px 22px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:background .3s,border-color .3s}
+.ct-lines a:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+.ct-lines span{font-size:13px;color:rgba(255,255,255,.66)}
+.ct-lines b{font-family:var(--f-d);font-weight:500;font-size:clamp(16px,1.3vw,19px);overflow-wrap:anywhere}
+.ftr{color:var(--ink-2);font-size:13px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+.ftr .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){.hub-ring{animation:none}.fd,.marq .t{animation:none}}
+
+/* ---------- laptops ---------- */
+@media(max-width:1280px){
+  .svc-head{grid-template-columns:auto minmax(0,1fr)}.svc-head p{grid-column:2}
+}
+/* ---------- tablets ---------- */
+@media(max-width:960px){
+  .ab-in,.leaders{grid-template-columns:1fr}
+  .ab-ph{aspect-ratio:4/3}
+  .vals,.creds{grid-template-columns:1fr}
+  .map-in{grid-template-columns:1fr}
+  .ct-lines{grid-template-columns:1fr;max-width:520px}
+}
+/* ---------- phones ---------- */
+@media(max-width:700px){
+  .stats{grid-template-columns:repeat(2,1fr);border-top:0}
+  .stats div{padding:24px 10px;border-top:1px solid var(--hair)}
+  .stats div:nth-child(3){border-inline-start:0}
+  .vm{grid-template-columns:1fr;gap:0}.vm > div{padding-block:22px}
+  .svc-head{grid-template-columns:1fr}.svc-head p{grid-column:auto}
+  .svc-v{height:62vw}
+  .cards.c3,.cards.c2{grid-template-columns:1fr}
+  .pjs{grid-template-columns:1fr}
+  .msg{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center}
+  .team{grid-template-columns:1fr}
+  .team li{font-size:16px}
+  .tl{grid-template-columns:1fr 1fr;row-gap:34px}
+  .tl::before{display:none}
+  .ksa .cty{font-size:30px}.ksa .hub-l{font-size:36px}
+  .map .ksa{width:calc(100% + 20px);margin-inline:-10px}
+  .msg{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+  .ftr .wrap{flex-direction:column;gap:4px}
+}
+/* phones: each service's fleet becomes a swipeable row */
+@media(max-width:700px){
+  .cards.c3,.cards.c2{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:6px;margin-inline:calc(var(--gl) * -1) calc(var(--gr) * -1);padding-inline:var(--gl) var(--gr);scroll-padding-inline:var(--gl);scrollbar-width:none}
+  .cards::-webkit-scrollbar{display:none}
+  .card{flex:0 0 78%;scroll-snap-align:start}
+}
+
+/* fifth service: customs clearance (no photo cards, three tags) */
+.cx{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,2.6vw,36px)}
+.cx span{padding:10px 18px;border-radius:999px;border:1px solid var(--hair);font-size:clamp(14px,1vw,16px);color:var(--ink-2)}
+
+/* ===== v9: calmer type — the copy sits further back, with more air around it ===== */
+.h2{font-size:clamp(23px,2.3vw,38px);font-weight:400;line-height:1.4;max-width:20em}
+.cap-t{font-size:clamp(24px,2.9vw,46px);font-weight:400;line-height:1.35;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.big{font-size:clamp(22px,2.6vw,40px);font-weight:400;line-height:1.5;max-width:20em}
+.stats b{font-size:clamp(30px,3.2vw,48px);font-weight:300}
+.svc-t{font-size:clamp(21px,1.9vw,30px);font-weight:400}
+.ct-h{font-size:clamp(26px,3.2vw,50px);font-weight:400;line-height:1.3}
+.tl b{font-size:clamp(21px,1.8vw,28px);font-weight:400}
+.ab-lead{font-size:clamp(16px,1.2vw,19px)}
+.q{font-size:clamp(16px,1.25vw,19px)}
+.pj-tx h3{font-size:clamp(18px,1.45vw,23px);font-weight:400}
+.card h4{font-size:clamp(16px,1.15vw,18px)}
+.vals h4{font-size:clamp(16px,1.2vw,19px)}
+.vm h3{font-size:clamp(17px,1.35vw,21px)}
+.ab-p,.vm p,.svc-head p,.pj-tx p{font-size:clamp(14px,1vw,16px)}
+.card p,.vals p,.tl span{font-size:14px}
+.sig b{font-size:16px}
+.team li{font-size:clamp(14px,1.1vw,17px)}
+.ct-sub{font-size:clamp(14px,1.05vw,17px)}
+.ct-lines b{font-size:clamp(15px,1.1vw,17px)}
+.svc-head{row-gap:12px}
+.cards{gap:clamp(16px,2vw,30px)}
+.win{min-height:100svh}
+@media (max-width:700px){
+  body{font-size:15px}
+  .h2{font-size:22px}
+  .cap-t{font-size:clamp(21px,6vw,27px);max-width:13em}
+  .big{font-size:21px}
+  .stats b{font-size:30px}
+  .svc-t{font-size:21px}
+  .ct-h{font-size:26px}
+  .tl b{font-size:22px}
+  .q{font-size:15.5px}
+  .team li{font-size:14px}
+  .win{min-height:82svh}
+}
+/* no live blur behind the copy on any screen: it was recomputed on every scroll frame over the moving film (83 ms -> 17 ms per frame in tests) */
+@media all{
+  .fog::before{background:rgba(255,255,255,.9);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .fogf::before{background:rgba(255,255,255,.93);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .hdr::before{background:rgba(255,255,255,.96);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .ct-lines a{background:rgba(8,12,22,.5);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+</style>
+</head>
+<body>
+<div id="app" dir="rtl" lang="ar">
+
+<header class="hdr" id="hdr">
+  <div class="in">
+    <a class="brand" href="#top"><img src="assets/img/logo-sm.webp" alt="" width="56" height="56"><b data-en="Projects OSTUL">أسطول المشاريع</b></a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="#top" data-k="top" data-en="Home">الرئيسية</a>
+      <div class="dd"><button type="button" aria-expanded="false" data-k="about"><span data-en="About us">من نحن</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        <div class="dd-m"><a href="#about" data-en="Who we are">نبذة عن الشركة</a><a href="#vision" data-en="Vision, mission, objectives">الرؤية والرسالة والأهداف</a><a href="#lead" data-en="Leadership">القيادة</a><a href="#milestones" data-en="Our journey">مسيرتنا</a></div></div>
+      <div class="dd"><button type="button" aria-expanded="false" data-k="services"><span data-en="Services">خدماتنا</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        <div class="dd-m"><a href="#svc-0" data-en="Heavy and exceptional loads">النقل الثقيل والاستثنائي</a><a href="#svc-1" data-en="Containers and dry cargo">الحاويات والبضائع الجافة</a><a href="#svc-2" data-en="Water and sewage">المياه والصرف الصحي</a><a href="#svc-3" data-en="General contracting">المقاولات العامة</a><a href="#svc-4" data-en="Customs clearance">التخليص الجمركي</a></div></div>
+      <a href="#work" data-k="work" data-en="Projects">مشاريعنا</a>
+      <a href="#quality" data-k="quality" data-en="Safety and quality">الجودة والسلامة</a>
+      <a href="#map" data-k="map" data-en="Coverage">مناطق العمل</a>
+      <a href="#contact" data-k="contact" data-en="Contact">تواصل معنا</a>
+    </nav>
+    <div class="tools">
+      <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+      <a class="pill" href="https://wa.me/966575121111?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%D9%85%20%D9%85%D9%86%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%D8%8C%20%D9%88%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%86%D9%82%D9%84." target="_blank" rel="noopener" data-en="Request transport">اطلب نقلًا</a>
+      <button class="burger" id="burger" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="القائمة">
+    <a href="#top" data-en="Home">الرئيسية</a>
+    <p class="m-g" data-en="About us">من نحن</p>
+    <div class="m-sub"><a href="#about" data-en="Who we are">نبذة عن الشركة</a><a href="#vision" data-en="Vision, mission, objectives">الرؤية والرسالة والأهداف</a><a href="#lead" data-en="Leadership">القيادة</a><a href="#milestones" data-en="Our journey">مسيرتنا</a></div>
+    <p class="m-g" data-en="Services">خدماتنا</p>
+    <div class="m-sub"><a href="#svc-0" data-en="Heavy and exceptional loads">النقل الثقيل والاستثنائي</a><a href="#svc-1" data-en="Containers and dry cargo">الحاويات والبضائع الجافة</a><a href="#svc-2" data-en="Water and sewage">المياه والصرف الصحي</a><a href="#svc-3" data-en="General contracting">المقاولات العامة</a><a href="#svc-4" data-en="Customs clearance">التخليص الجمركي</a></div>
+    <a href="#work" data-en="Projects">مشاريعنا</a>
+    <a href="#quality" data-en="Safety and quality">الجودة والسلامة</a>
+    <a href="#map" data-en="Coverage">مناطق العمل</a>
+    <a href="#contact" data-en="Contact">تواصل معنا</a>
+  </nav>
+  <a class="m-wa" href="https://wa.me/966575121111?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%D9%85%20%D9%85%D9%86%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%D8%8C%20%D9%88%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85." target="_blank" rel="noopener"><span data-en="WhatsApp">واتساب</span><b class="num">057 512 1111</b></a>
+</div>
+
+<main id="top">
+<div class="bgfilm" aria-hidden="true">
+  <img class="film-poster" src="assets/vid/hero.webp" alt="" fetchpriority="high">
+  <canvas id="fc"></canvas>
+  <div class="shade"></div>
+</div>
+
+<section class="film" id="film" aria-label="أسطول المشاريع">
+  <div class="cap c0">
+    <img class="hero-logo" src="assets/img/logo.webp" alt="شعار أسطول المشاريع" width="520" height="525">
+    <p class="hero-name" data-en="Projects OSTUL General Contracting and Transport">شركة أسطول المشاريع للمقاولات العامة والنقليات</p>
+    <h1 class="cap-t" id="h1" data-en="We move what the Kingdom builds.">ننقل ما تبنيه المملكة.</h1>
+  </div>
+</section>
+
+<div class="fog">
+<section class="intro" id="intro">
+  <div class="wrap">
+    <p class="big wsplit" id="say" data-en="Heavy transport and general contracting, from Riyadh since 2000.">النقل الثقيل والمقاولات العامة، من الرياض منذ عام 2000.</p>
+    <div class="stats">
+      <div><b class="num">2000</b><span data-en="Founded in Riyadh">التأسيس في الرياض</span></div>
+      <div><b class="num">32<small data-en="m">م</small></b><span data-en="Longest exceptional load">أطول حمولة استثنائية</span></div>
+      <div><b class="num">7</b><span data-en="Fleet categories">فئات في الأسطول</span></div>
+      <div><b class="num">24</b><span data-en="Partner organisations">جهة شريكة</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" aria-labelledby="ab-h">
+  <div class="wrap ab-in">
+    <div class="ab-tx">
+      <p class="eyebrow" data-en="Who we are">من نحن</p>
+      <h2 class="h2" id="ab-h" data-en="A quarter century on Saudi roads.">ربع قرن على طرق المملكة.</h2>
+      <p class="ab-lead" data-en="Projects OSTUL for General Contracting and Engineering Transport was founded in Riyadh in 1420 AH (2000) to bring its experience to every job, whatever its size or class.">تأسست شركة أسطول المشاريع للمقاولات العامة والنقل الهندسي في الرياض عام 1420هـ (2000م)، لتقدّم خبرتها لكل عمل، أيًّا كان حجمه وتصنيفه.</p>
+      <p class="ab-p" data-en="We built specialised technical teams with long experience, and run our crews in parallel to deliver on time.">كوّنّا لذلك كوادر فنية متخصصة ذات خبرة عالية، وندير فرق العمل بالتوازي لنسلّم في الوقت.</p>
+    </div>
+    <figure class="ab-ph"><img src="assets/w/about.webp" alt="شاحنات أسطول المشاريع في موقع العمل" loading="lazy" width="1200" height="1500"></figure>
+  </div>
+  <div class="wrap">
+    <div class="vm" id="vision">
+      <div><span class="num">01</span><h3 data-en="Vision">رؤيتنا</h3><p data-en="A trusted name in contracting and land transport, inside and outside the Kingdom, in step with Vision 2030.">اسم موثوق في المقاولات والنقل البري داخل المملكة وخارجها، بما يواكب رؤية 2030.</p></div>
+      <div><span class="num">02</span><h3 data-en="Mission">رسالتنا</h3><p data-en="A modern, reliable fleet that keeps our clients' supply chains moving, to the highest standards of safety.">أسطول متطور وموثوق يحافظ على حركة سلاسل الإمداد لعملائنا، بأعلى معايير السلامة.</p></div>
+      <div><span class="num">03</span><h3 data-en="Objectives">أهدافنا</h3><p data-en="Professionalism, integrity and fairness with our suppliers and contractors, and a reach beyond our borders.">المهنية والنزاهة والعدالة مع الموردين والمقاولين، والوصول إلى منصات أوسع.</p></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="win" data-s="1" aria-hidden="true"><p class="cap-t wsplit" data-en="Exceptional loads, up to 32 metres.">حمولات استثنائية، حتى 32 مترًا.</p></section>
+
+<div class="fog">
+<div class="services" id="services">
+  <div class="wrap sv-top">
+    <p class="eyebrow" data-en="Our services">خدماتنا</p>
+    <h2 class="h2" data-en="Five services, one fleet.">خمس خدمات، وأسطول واحد.</h2>
+  </div>
+
+  <section class="svc" id="svc-0">
+    <div class="wrap svc-head"><span class="num">01</span><h3 class="svc-t" data-en="Heavy and exceptional loads">النقل الثقيل والاستثنائي</h3><p data-en="Heavy plant, long and exceptional loads up to 32 m, with permits and escorts.">معدات ثقيلة وحمولات طويلة واستثنائية حتى 32 مترًا، مع التصاريح والمرافقة.</p></div>
+    <div class="wrap cards c3">
+      <article class="card"><figure><img src="assets/w/lowbed.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Lowbed trucks">الشاحنات المنخفضة (لوبد)</h4><p data-en="Excavators and heavy plant on low trailers.">حفارات وآليات ثقيلة على مقطورات منخفضة.</p></article>
+      <article class="card"><figure><img src="assets/w/pipes.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Exceptional loads up to 32 m">حمولات استثنائية حتى 32 مترًا</h4><p data-en="Giant pipes, girders and structural pieces, with careful route planning.">أنابيب عملاقة وعوارض وقطع إنشائية، بتخطيط دقيق للمسار.</p></article>
+      <article class="card"><figure><img src="assets/w/long.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Long loads">الحمولات الطويلة</h4><p data-en="Trailers for steel, pipes and prefabricated units.">مقطورات مخصصة للحديد والأنابيب والوحدات الجاهزة.</p></article>
+    </div>
+  </section>
+
+  <section class="svc" id="svc-1">
+    <div class="wrap svc-head"><span class="num">02</span><h3 class="svc-t" data-en="Containers and dry cargo">الحاويات والبضائع الجافة</h3><p data-en="From the port to your site, in trucks that protect the load.">من الميناء إلى منشأتك، بشاحنات تحمي الحمولة.</p></div>
+    <div class="wrap cards c2">
+      <article class="card"><figure><img src="assets/w/containers.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Containers">الحاويات</h4><p data-en="From the ports to warehouses and sites.">من الموانئ إلى المستودعات والمواقع.</p></article>
+      <article class="card"><figure><img src="assets/w/taut.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Curtain-siders">شاحنات الستارة</h4><p data-en="Sealed curtains that protect goods on the road.">ستائر محكمة تحمي البضائع على الطريق.</p></article>
+    </div>
+  </section>
+
+  <section class="svc" id="svc-2">
+    <div class="wrap svc-head"><span class="num">03</span><h3 class="svc-t" data-en="Water and sewage">المياه والصرف الصحي</h3><p data-en="Approved tankers for drinking water, and vacuum tankers for sewage.">صهاريج معتمدة لمياه الشرب، وصهاريج شفط لمياه الصرف.</p></div>
+    <div class="wrap cards c2">
+      <article class="card"><figure><img src="assets/w/water.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Potable water">مياه الشرب</h4><p data-en="Drinking water delivered to sites and projects.">توصيل مياه الشرب إلى المواقع والمشاريع.</p></article>
+      <article class="card"><figure><img src="assets/w/sewage.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Sewage">الصرف الصحي</h4><p data-en="Suction and haulage of sewage and environmental liquids.">شفط ونقل مياه الصرف والسوائل البيئية.</p></article>
+    </div>
+  </section>
+
+  <section class="svc" id="svc-3">
+    <div class="wrap svc-head"><span class="num">04</span><h3 class="svc-t" data-en="General contracting">المقاولات العامة</h3><p data-en="Earthworks, dump-truck haulage and road paving.">حفر وردم وتسوية، ونقل بالقلابات، وسفلتة الطرق.</p></div>
+    <div class="wrap cards c3">
+      <article class="card"><figure><img src="assets/w/excav.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Earthworks">الحفر والردم</h4><p data-en="Cut, fill and site grading.">حفر وردم وتسوية للمواقع.</p></article>
+      <article class="card"><figure><img src="assets/w/dump.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Dump trucks">القلابات</h4><p data-en="Sand, aggregate and spoil, to and from site.">نقل الرمل والبحص ومخلفات الحفر.</p></article>
+      <article class="card"><figure><img src="assets/w/asphalt.webp" alt="" loading="lazy" width="1200" height="900"></figure><h4 data-en="Paving">السفلتة</h4><p data-en="Preparing and paving road layers.">تجهيز طبقات الطرق ورصفها.</p></article>
+    </div>
+  </section>
+  <section class="svc svc-x" id="svc-4">
+    <div class="wrap svc-head"><span class="num">05</span><h3 class="svc-t" data-en="Customs clearance">التخليص الجمركي</h3><p data-en="Customs clearance, and completion of all port procedures, so your shipment moves from the port to your site.">تخليص جمركي، وإنهاء كافة إجراءات الميناء، لتنتقل شحنتك من الميناء إلى موقعك.</p></div>
+    <div class="wrap cx"><span data-en="Customs clearance">التخليص الجمركي</span><span data-en="All port procedures">كافة إجراءات الميناء</span><span data-en="Port to site">من الميناء إلى الموقع</span></div>
+  </section>
+</div>
+
+<section class="field" aria-label="من الميدان">
+  <p class="eyebrow c" data-en="From the field">من الميدان</p>
+  <div class="fd" id="fd"></div>
+</section>
+
+</div>
+
+<section class="win" data-s="2" aria-hidden="true"><p class="cap-t wsplit" data-en="Drinking water, to every site.">مياه الشرب، إلى كل موقع.</p></section>
+
+<div class="fog">
+<section class="work" id="work" aria-labelledby="wk-h">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Our projects">مشاريعنا</p>
+    <h2 class="h2" id="wk-h" data-en="Loads we have moved.">حمولات نقلناها.</h2>
+    <div class="pjs">
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p1.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">01</span><h3 data-en="Wind turbine blade">نقل شفرة توربين رياح</h3><p data-en="A turbine blade on an extendable trailer, with an escort vehicle.">شفرة توربين على مقطورة ممتدة، مع مركبة مرافقة.</p><ul class="tags"><li data-en="Long load">حمولة طويلة</li><li data-en="Extendable trailer">مقطورة ممتدة</li><li data-en="Escort">مرافقة</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p2.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">02</span><h3 data-en="Industrial pressure vessels">أوعية ضغط صناعية</h3><p data-en="Large pressure vessels on a multi-axle lowbed.">أوعية ضغط ضخمة على مقطورة منخفضة متعددة المحاور.</p><ul class="tags"><li data-en="Exceptional load">حمولة استثنائية</li><li data-en="Multi-axle lowbed">لوبد متعدد المحاور</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p3.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">03</span><h3 data-en="Steel bridge girder">عارضة جسر فولاذية</h3><p data-en="An arched girder as wide as the lane, on a road under construction.">عارضة مقوّسة بعرض المسار، على طريق قيد الإنشاء.</p><ul class="tags"><li data-en="Wide load">حمولة عريضة</li><li data-en="Infrastructure">بنية تحتية</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p4.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">04</span><h3 data-en="Lifting and loading a tank">رفع خزان وتحميله</h3><p data-en="A cylindrical tank lifted by crane and secured on the truck.">خزان أسطواني يُرفع بالرافعة ويُثبّت على الشاحنة.</p><ul class="tags"><li data-en="Lifting">رفع وتحميل</li><li data-en="Crane">رافعة</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p5.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">05</span><h3 data-en="Giant steel pipes">أنابيب فولاذية عملاقة</h3><p data-en="Pipes loaded by crawler crane at the project site.">تحميل الأنابيب بالرافعة المجنزرة في موقع المشروع.</p><ul class="tags"><li data-en="Pipes">أنابيب</li><li data-en="Crawler crane">رافعة مجنزرة</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p6.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">06</span><h3 data-en="Steel coils">لفائف الحديد</h3><p data-en="A heavy steel coil secured on a flatbed.">لفة حديد ثقيلة مثبّتة على مقطورة مسطحة.</p><ul class="tags"><li data-en="Steel">حديد</li><li data-en="Flatbed">مقطورة مسطحة</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p7.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">07</span><h3 data-en="Crated equipment">معدات في صناديق</h3><p data-en="Wood-crated cargo on a lowbed trailer.">شحنات مغلّفة بالخشب على مقطورة منخفضة.</p><ul class="tags"><li data-en="Equipment">معدات</li><li data-en="Lowbed">لوبد</li></ul></div></article>
+      <article class="pj"><div class="pj-ph"><img src="assets/proj/p8.webp" alt="" loading="lazy" width="1200" height="900"></div><div class="pj-tx"><span class="num">08</span><h3 data-en="A pipe convoy">قافلة أنابيب</h3><p data-en="Trucks in line carrying large-diameter pipes.">شاحنات متتالية تنقل أنابيب كبيرة القطر.</p><ul class="tags"><li data-en="Convoy">قافلة</li><li data-en="Pipes">أنابيب</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="quality" id="quality" aria-labelledby="q-h">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Safety and quality">الجودة والسلامة</p>
+    <h2 class="h2" id="q-h" data-en="Safety first. Time is a commitment.">السلامة أولًا، والوقت التزام.</h2>
+    <div class="vals" id="values">
+      <div><span class="num">01</span><h4 data-en="Safety first">السلامة أولًا</h4><p data-en="Strict protocols to protect loads and heavy plant on the road and on site.">بروتوكولات دقيقة لحماية الحمولات والمعدات على الطريق وفي الموقع.</p></div>
+      <div><span class="num">02</span><h4 data-en="Reliability">الموثوقية</h4><p data-en="Our contracts are a commitment, and our schedules are not open to compromise.">عقودنا التزام، وجداولنا الزمنية لا نتهاون فيها.</p></div>
+      <div><span class="num">03</span><h4 data-en="Compliance">الامتثال</h4><p data-en="Operations in line with the Transport General Authority and the Kingdom's regulations.">عمليات متوافقة مع الهيئة العامة للنقل وأنظمة المملكة.</p></div>
+    </div>
+    <div class="creds" id="creds">
+      <div><b data-en="Commercial registration">السجل التجاري</b><span data-en="Ministry of Commerce">وزارة التجارة</span></div>
+      <div><b data-en="VAT registered">ضريبة القيمة المضافة</b><span data-en="Zakat, Tax and Customs Authority">هيئة الزكاة والضريبة والجمارك</span></div>
+      <div><b data-en="Road freight licence">ترخيص نقل البضائع على الطرق البرية</b><span data-en="Transport General Authority">الهيئة العامة للنقل</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="lead" id="lead" aria-labelledby="ld-h">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Leadership">القيادة</p>
+    <h2 class="sr" id="ld-h" data-en="Leadership">القيادة</h2>
+    <div class="leaders">
+      <article class="msg">
+        <figure class="msg-ph"><img src="assets/img/chairman-cut.webp" alt="سلطان علي الطرامي، رئيس مجلس الإدارة" loading="lazy" width="800" height="1000"></figure>
+        <div class="msg-tx">
+          <p class="q" data-en="Since our founding in Riyadh in 1420 AH, our aim has been one: the best service in contracting and transport, whatever the size of the work.">منذ تأسيسنا في الرياض عام 1420هـ، هدفنا واحد: أفضل خدمة في المقاولات والنقل، أيًّا كان حجم العمل.</p>
+          <p class="sig"><b data-en="Sultan Ali Al-Tarami">سلطان علي الطرامي</b><span data-en="Chairman of the Board">رئيس مجلس الإدارة</span></p>
+        </div>
+      </article>
+      <article class="msg">
+        <figure class="msg-ph"><img src="assets/img/ceo-cut.webp?v=3" alt="علي سلطان الطرامي، الرئيس التنفيذي" loading="lazy" width="800" height="1000"></figure>
+        <div class="msg-tx">
+          <p class="q" data-en="Every achievement begins with one step, and commitment turns it into reality. We put our experience and our fleet to work for your projects, to the highest standards of safety.">كل إنجاز يبدأ بخطوة، والالتزام هو ما يحوّله إلى واقع. نضع خبرتنا وأسطولنا في خدمة مشاريعكم، بأعلى معايير السلامة.</p>
+          <p class="sig"><b data-en="Ali Sultan Al-Tarami">علي سلطان الطرامي</b><span data-en="Chief Executive Officer">الرئيس التنفيذي</span></p>
+        </div>
+      </article>
+    </div>
+    <div class="team"><h3 data-en="Our team">فريق العمل</h3><ul><li data-en="General management">الإدارة العامة</li><li data-en="Sales">المبيعات</li><li data-en="Government relations">العلاقات الحكومية</li><li data-en="Human resources">الموارد البشرية</li><li data-en="Finance">المالية</li><li data-en="Operation and maintenance">التشغيل والصيانة</li><li data-en="Movement and dispatch">الحركة</li></ul></div>
+  </div>
+</section>
+
+</div>
+
+<section class="win" data-s="3" aria-hidden="true"><p class="cap-t wsplit" data-en="From groundwork to asphalt.">من الحفر إلى الإسفلت.</p></section>
+
+<div class="fog">
+<section class="journey" id="milestones" aria-labelledby="jr-h">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Our journey">مسيرتنا</p>
+    <h2 class="sr" id="jr-h" data-en="Our journey">مسيرتنا</h2>
+    <ol class="tl">
+      <li><b class="num">2000</b><span data-en="Founded in Riyadh">التأسيس في الرياض</span></li>
+      <li><b class="num">2015</b><span data-en="A larger fleet and a wider network">توسيع الأسطول والشبكة داخل المملكة</span></li>
+      <li><b class="num">2026</b><span data-en="Wider partnerships with vital sectors">توسيع الشراكات مع القطاعات الحيوية</span></li>
+      <li><b class="num">2030</b><span data-en="In step with Saudi Vision 2030">التكامل مع رؤية المملكة 2030</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="map" id="map" aria-labelledby="mp-h">
+  <div class="wrap map-in">
+    <div><p class="eyebrow" data-en="Base: Riyadh">المقر: الرياض</p><h2 class="h2" id="mp-h" data-en="From Riyadh to projects across the Kingdom.">من الرياض إلى مشاريع المملكة.</h2></div>
+    <svg class="ksa" viewBox="-60 -40 1120 900" aria-hidden="true">
+      <defs><pattern id="dotp" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="rgba(12,18,34,.16)"/></pattern><clipPath id="kc"><path d="M350.7,802.4L354.3,802.6L352.7,800.9L352.4,800.1L354.1,797.7L359.2,802.7L359.1,808.5L358.7,809.9L357.4,808.6L356.3,807.4L356.0,806.1L354.6,804.6L349.5,805.5L346.4,804.0L341.8,799.0L340.6,795.5L342.5,794.8L344.5,793.0L345.7,790.2L344.5,787.4L347.3,787.8L348.8,790.8L349.0,797.6L349.5,799.0L348.6,800.5L350.7,802.4ZM825.9,683.6L814.6,685.2L803.8,686.8L791.6,688.7L776.9,690.8L765.4,692.4L748.6,695.0L733.6,697.1L719.5,699.2L705.3,701.3L693.3,703.1L686.1,705.2L677.7,709.6L664.7,716.6L651.5,723.6L644.9,727.2L637.7,736.6L634.1,741.3L627.4,749.9L622.4,756.4L616.6,764.1L614.0,771.1L610.1,781.7L606.7,784.4L601.0,787.8L595.9,790.2L587.8,790.0L583.4,783.4L578.4,776.5L576.0,773.7L574.0,773.5L565.9,774.4L556.2,775.5L544.9,774.3L531.7,773.0L519.3,771.8L513.2,770.9L505.1,766.4L503.1,765.5L500.9,765.3L491.4,765.1L481.8,765.0L472.3,766.5L463.2,765.9L453.8,766.7L450.3,768.5L446.7,768.4L444.3,769.9L442.5,770.6L439.9,769.3L437.0,769.6L432.7,768.5L429.8,765.6L427.2,762.9L424.5,761.5L421.4,760.7L418.7,760.6L415.2,762.2L413.2,763.8L407.9,768.8L407.7,770.6L410.1,773.6L409.2,775.1L406.2,776.9L405.3,781.7L404.8,784.3L404.3,790.5L405.7,795.5L407.5,797.3L407.7,799.5L406.7,803.7L403.8,805.0L401.7,809.0L400.3,810.9L398.1,813.1L389.2,820.3L388.7,816.1L386.0,809.9L385.8,805.5L384.4,801.2L382.0,797.8L377.6,794.4L377.1,789.6L373.8,784.9L369.5,781.1L367.0,774.2L365.2,764.8L353.8,752.6L339.4,741.4L334.9,735.0L327.7,722.1L324.1,711.9L314.6,700.1L314.2,695.6L312.7,690.1L310.4,684.0L309.2,679.1L299.5,657.8L296.4,654.5L293.7,649.7L293.0,646.1L292.1,644.1L285.4,640.6L278.9,631.6L259.9,617.4L250.5,616.1L243.2,611.0L237.7,604.3L231.8,592.9L221.6,580.6L213.0,563.1L215.8,556.7L215.6,552.3L212.8,544.7L209.9,538.9L207.9,533.4L209.6,525.4L210.1,516.6L211.8,511.9L213.0,506.7L211.5,496.3L208.6,490.8L208.9,487.1L205.7,485.3L202.9,481.2L205.7,481.3L200.7,475.7L198.8,472.6L196.9,465.0L194.5,459.3L186.8,446.1L183.0,438.0L174.7,427.7L165.6,420.0L159.9,416.6L157.2,413.4L152.4,413.2L147.3,408.7L143.7,408.6L139.2,407.9L133.9,399.1L129.5,391.0L121.9,380.3L123.8,377.5L126.0,373.0L125.0,367.1L123.8,363.2L120.5,355.8L109.6,337.6L106.7,335.0L102.1,331.9L99.3,323.9L97.9,316.9L90.4,313.5L77.7,288.0L70.2,279.0L67.3,273.1L58.7,263.2L54.6,253.4L45.9,244.3L38.4,228.7L26.9,212.9L21.9,210.2L10.1,209.2L5.0,208.0L0.3,211.4L0.0,207.1L3.3,201.0L7.7,188.4L8.7,177.2L15.9,144.3L26.0,146.0L34.4,147.4L46.6,149.5L59.2,151.6L66.6,152.8L69.0,152.3L79.3,144.3L88.5,136.9L94.0,128.1L99.3,119.4L101.7,117.6L109.9,116.1L122.9,113.4L135.8,110.9L136.6,110.1L139.7,103.1L143.5,94.4L144.3,93.5L145.2,92.6L154.5,87.6L159.9,84.6L152.1,75.8L144.5,67.5L136.1,58.2L129.1,51.0L118.3,40.1L111.5,33.0L123.6,29.6L136.8,26.0L150.2,22.3L166.3,17.9L178.8,14.5L197.6,9.3L206.7,6.8L208.4,6.1L215.4,0.0L226.0,1.7L242.0,4.3L257.4,6.8L273.6,9.7L278.9,12.1L294.5,20.8L304.8,26.5L316.6,33.2L331.5,41.4L341.6,47.1L354.8,54.4L364.9,62.7L377.9,73.3L392.0,84.9L403.6,93.9L419.7,106.3L435.6,118.5L451.0,130.5L463.5,140.1L479.1,152.2L480.5,152.7L496.2,154.0L517.6,155.9L539.0,157.7L558.4,159.4L566.8,157.7L575.9,158.8L588.2,160.3L595.5,161.3L609.6,163.2L613.9,171.2L615.4,176.7L616.8,182.1L620.9,187.0L630.5,186.9L638.9,186.8L649.3,186.6L657.7,186.6L660.3,191.4L661.5,196.3L666.4,207.9L673.5,216.9L675.0,220.2L676.2,225.2L675.0,227.0L674.5,229.1L679.6,234.1L688.4,238.3L691.6,239.3L695.4,241.2L692.5,244.0L697.6,250.7L703.4,257.4L709.8,259.0L718.3,269.2L731.0,275.8L738.9,284.4L738.2,284.6L735.8,283.7L733.0,282.5L732.2,283.6L732.2,287.2L733.0,291.5L737.0,295.2L740.6,297.8L742.0,302.9L739.0,313.7L738.2,313.6L736.3,312.7L734.2,312.6L733.2,313.2L735.6,321.0L737.8,326.9L740.8,331.6L743.2,338.6L745.0,341.5L753.4,348.9L755.8,355.0L758.2,366.5L763.4,372.8L766.3,377.8L770.0,382.0L772.4,387.7L775.9,392.1L777.7,393.2L780.3,393.6L783.7,393.6L787.7,392.5L792.0,391.5L795.4,393.6L798.8,393.4L799.1,395.4L796.9,398.2L794.0,405.3L798.1,406.5L801.9,407.0L804.8,408.2L806.3,408.2L806.3,409.6L806.5,416.4L807.5,418.9L809.2,421.2L811.8,424.6L814.4,428.1L817.1,431.5L819.7,434.8L822.3,438.3L825.0,441.7L827.6,445.1L830.1,448.5L832.7,451.9L835.4,455.4L838.0,458.7L840.6,462.1L843.3,465.6L845.9,469.0L848.5,472.4L851.0,475.8L853.3,478.6L857.2,479.1L858.6,479.3L862.2,479.8L867.6,480.6L875.0,481.5L883.6,482.7L893.2,483.9L903.4,485.3L914.0,486.7L924.7,488.2L934.8,489.5L944.3,490.8L953.1,492.0L960.3,493.0L965.9,493.7L969.5,494.1L970.7,494.3L974.5,494.9L975.2,494.7L978.4,490.5L981.8,496.4L984.8,501.3L988.7,508.1L993.0,515.2L997.1,522.0L1000.0,527.1L998.5,532.4L996.7,538.2L995.0,543.9L993.2,549.6L991.4,555.4L989.7,561.2L988.0,567.0L986.3,572.7L984.4,578.5L982.7,584.3L981.0,590.0L979.3,595.7L977.6,601.5L975.9,607.3L974.0,613.1L972.3,618.8L970.5,624.6L968.5,631.5L963.4,633.3L955.3,636.3L947.1,639.3L938.9,642.3L930.7,645.4L922.4,648.3L914.4,651.3L906.2,654.3L897.9,657.3L889.7,660.3L881.5,663.3L873.5,666.2L865.2,669.2L857.0,672.2L848.8,675.2L840.8,678.2L832.5,681.1L825.9,683.6Z"/></clipPath></defs>
+      <rect x="0" y="0" width="1000" height="820" fill="url(#dotp)" clip-path="url(#kc)"/>
+      <path class="land" d="M350.7,802.4L354.3,802.6L352.7,800.9L352.4,800.1L354.1,797.7L359.2,802.7L359.1,808.5L358.7,809.9L357.4,808.6L356.3,807.4L356.0,806.1L354.6,804.6L349.5,805.5L346.4,804.0L341.8,799.0L340.6,795.5L342.5,794.8L344.5,793.0L345.7,790.2L344.5,787.4L347.3,787.8L348.8,790.8L349.0,797.6L349.5,799.0L348.6,800.5L350.7,802.4ZM825.9,683.6L814.6,685.2L803.8,686.8L791.6,688.7L776.9,690.8L765.4,692.4L748.6,695.0L733.6,697.1L719.5,699.2L705.3,701.3L693.3,703.1L686.1,705.2L677.7,709.6L664.7,716.6L651.5,723.6L644.9,727.2L637.7,736.6L634.1,741.3L627.4,749.9L622.4,756.4L616.6,764.1L614.0,771.1L610.1,781.7L606.7,784.4L601.0,787.8L595.9,790.2L587.8,790.0L583.4,783.4L578.4,776.5L576.0,773.7L574.0,773.5L565.9,774.4L556.2,775.5L544.9,774.3L531.7,773.0L519.3,771.8L513.2,770.9L505.1,766.4L503.1,765.5L500.9,765.3L491.4,765.1L481.8,765.0L472.3,766.5L463.2,765.9L453.8,766.7L450.3,768.5L446.7,768.4L444.3,769.9L442.5,770.6L439.9,769.3L437.0,769.6L432.7,768.5L429.8,765.6L427.2,762.9L424.5,761.5L421.4,760.7L418.7,760.6L415.2,762.2L413.2,763.8L407.9,768.8L407.7,770.6L410.1,773.6L409.2,775.1L406.2,776.9L405.3,781.7L404.8,784.3L404.3,790.5L405.7,795.5L407.5,797.3L407.7,799.5L406.7,803.7L403.8,805.0L401.7,809.0L400.3,810.9L398.1,813.1L389.2,820.3L388.7,816.1L386.0,809.9L385.8,805.5L384.4,801.2L382.0,797.8L377.6,794.4L377.1,789.6L373.8,784.9L369.5,781.1L367.0,774.2L365.2,764.8L353.8,752.6L339.4,741.4L334.9,735.0L327.7,722.1L324.1,711.9L314.6,700.1L314.2,695.6L312.7,690.1L310.4,684.0L309.2,679.1L299.5,657.8L296.4,654.5L293.7,649.7L293.0,646.1L292.1,644.1L285.4,640.6L278.9,631.6L259.9,617.4L250.5,616.1L243.2,611.0L237.7,604.3L231.8,592.9L221.6,580.6L213.0,563.1L215.8,556.7L215.6,552.3L212.8,544.7L209.9,538.9L207.9,533.4L209.6,525.4L210.1,516.6L211.8,511.9L213.0,506.7L211.5,496.3L208.6,490.8L208.9,487.1L205.7,485.3L202.9,481.2L205.7,481.3L200.7,475.7L198.8,472.6L196.9,465.0L194.5,459.3L186.8,446.1L183.0,438.0L174.7,427.7L165.6,420.0L159.9,416.6L157.2,413.4L152.4,413.2L147.3,408.7L143.7,408.6L139.2,407.9L133.9,399.1L129.5,391.0L121.9,380.3L123.8,377.5L126.0,373.0L125.0,367.1L123.8,363.2L120.5,355.8L109.6,337.6L106.7,335.0L102.1,331.9L99.3,323.9L97.9,316.9L90.4,313.5L77.7,288.0L70.2,279.0L67.3,273.1L58.7,263.2L54.6,253.4L45.9,244.3L38.4,228.7L26.9,212.9L21.9,210.2L10.1,209.2L5.0,208.0L0.3,211.4L0.0,207.1L3.3,201.0L7.7,188.4L8.7,177.2L15.9,144.3L26.0,146.0L34.4,147.4L46.6,149.5L59.2,151.6L66.6,152.8L69.0,152.3L79.3,144.3L88.5,136.9L94.0,128.1L99.3,119.4L101.7,117.6L109.9,116.1L122.9,113.4L135.8,110.9L136.6,110.1L139.7,103.1L143.5,94.4L144.3,93.5L145.2,92.6L154.5,87.6L159.9,84.6L152.1,75.8L144.5,67.5L136.1,58.2L129.1,51.0L118.3,40.1L111.5,33.0L123.6,29.6L136.8,26.0L150.2,22.3L166.3,17.9L178.8,14.5L197.6,9.3L206.7,6.8L208.4,6.1L215.4,0.0L226.0,1.7L242.0,4.3L257.4,6.8L273.6,9.7L278.9,12.1L294.5,20.8L304.8,26.5L316.6,33.2L331.5,41.4L341.6,47.1L354.8,54.4L364.9,62.7L377.9,73.3L392.0,84.9L403.6,93.9L419.7,106.3L435.6,118.5L451.0,130.5L463.5,140.1L479.1,152.2L480.5,152.7L496.2,154.0L517.6,155.9L539.0,157.7L558.4,159.4L566.8,157.7L575.9,158.8L588.2,160.3L595.5,161.3L609.6,163.2L613.9,171.2L615.4,176.7L616.8,182.1L620.9,187.0L630.5,186.9L638.9,186.8L649.3,186.6L657.7,186.6L660.3,191.4L661.5,196.3L666.4,207.9L673.5,216.9L675.0,220.2L676.2,225.2L675.0,227.0L674.5,229.1L679.6,234.1L688.4,238.3L691.6,239.3L695.4,241.2L692.5,244.0L697.6,250.7L703.4,257.4L709.8,259.0L718.3,269.2L731.0,275.8L738.9,284.4L738.2,284.6L735.8,283.7L733.0,282.5L732.2,283.6L732.2,287.2L733.0,291.5L737.0,295.2L740.6,297.8L742.0,302.9L739.0,313.7L738.2,313.6L736.3,312.7L734.2,312.6L733.2,313.2L735.6,321.0L737.8,326.9L740.8,331.6L743.2,338.6L745.0,341.5L753.4,348.9L755.8,355.0L758.2,366.5L763.4,372.8L766.3,377.8L770.0,382.0L772.4,387.7L775.9,392.1L777.7,393.2L780.3,393.6L783.7,393.6L787.7,392.5L792.0,391.5L795.4,393.6L798.8,393.4L799.1,395.4L796.9,398.2L794.0,405.3L798.1,406.5L801.9,407.0L804.8,408.2L806.3,408.2L806.3,409.6L806.5,416.4L807.5,418.9L809.2,421.2L811.8,424.6L814.4,428.1L817.1,431.5L819.7,434.8L822.3,438.3L825.0,441.7L827.6,445.1L830.1,448.5L832.7,451.9L835.4,455.4L838.0,458.7L840.6,462.1L843.3,465.6L845.9,469.0L848.5,472.4L851.0,475.8L853.3,478.6L857.2,479.1L858.6,479.3L862.2,479.8L867.6,480.6L875.0,481.5L883.6,482.7L893.2,483.9L903.4,485.3L914.0,486.7L924.7,488.2L934.8,489.5L944.3,490.8L953.1,492.0L960.3,493.0L965.9,493.7L969.5,494.1L970.7,494.3L974.5,494.9L975.2,494.7L978.4,490.5L981.8,496.4L984.8,501.3L988.7,508.1L993.0,515.2L997.1,522.0L1000.0,527.1L998.5,532.4L996.7,538.2L995.0,543.9L993.2,549.6L991.4,555.4L989.7,561.2L988.0,567.0L986.3,572.7L984.4,578.5L982.7,584.3L981.0,590.0L979.3,595.7L977.6,601.5L975.9,607.3L974.0,613.1L972.3,618.8L970.5,624.6L968.5,631.5L963.4,633.3L955.3,636.3L947.1,639.3L938.9,642.3L930.7,645.4L922.4,648.3L914.4,651.3L906.2,654.3L897.9,657.3L889.7,660.3L881.5,663.3L873.5,666.2L865.2,669.2L857.0,672.2L848.8,675.2L840.8,678.2L832.5,681.1L825.9,683.6Z"/>
+      <g id="routes"></g>
+      <g class="ctys"><text class="cty" x="203.6" y="561.7" text-anchor="end" data-en="Jeddah">جدة</text><text class="cty" x="252" y="601.4" text-anchor="middle" data-en="Makkah">مكة المكرمة</text><text class="cty" x="249.5" y="382.6" text-anchor="start" data-en="Madinah">المدينة المنورة</text><text class="cty" x="149.8" y="428.4" text-anchor="end" data-en="Yanbu">ينبع</text><text class="cty" x="750.5" y="308.5" text-anchor="start" data-en="Dammam">الدمام</text><text class="cty" x="729.5" y="250.3" text-anchor="start" data-en="Jubail">الجبيل</text><text class="cty" x="726.2" y="387.2" text-anchor="start" data-en="Al-Ahsa">الأحساء</text><text class="cty" x="104.9" y="181" text-anchor="start" data-en="Tabuk">تبوك</text><text class="cty" x="361" y="732" text-anchor="end" data-en="Abha">أبها</text><text class="cty" x="363.4" y="807.2" text-anchor="end" data-en="Jazan">جازان</text><text class="cty" x="466.5" y="774" text-anchor="start" data-en="Najran">نجران</text><text class="cty" x="322.5" y="229.8" text-anchor="end" data-en="Hail">حائل</text><text class="cty" x="456.9" y="287.7" text-anchor="start" data-en="Buraidah">بريدة</text></g>
+      <circle class="hub-ring" cx="575.7" cy="386.1" r="22"/>
+      <circle class="hub" cx="575.7" cy="386.1" r="8"/>
+      <text class="cty hub-l" x="575.7" y="356.1" text-anchor="middle" data-en="Riyadh">الرياض</text>
+    </svg>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="wrap"><p class="eyebrow c" data-en="Success partners">شركاء النجاح</p><h2 class="h2" data-en="Organisations we have worked with.">جهات عملنا معها.</h2></div>
+  <div class="marq" id="marq"></div>
+</section>
+
+</div>
+
+<section class="contact" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <img class="ct-logo" src="assets/img/logo.webp" alt="شعار أسطول المشاريع" width="520" height="525" loading="lazy">
+    <h2 class="ct-h" id="ct-h" data-en="Let's move your next load.">لننقل حمولتك القادمة.</h2>
+    <p class="ct-sub" data-en="Sound planning for every project, and full commitment to time.">التخطيط السليم لكل مشروع، والالتزام الكامل بالوقت.</p>
+    <div class="ct-lines">
+      <a href="https://wa.me/966575121111?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%D9%85%20%D9%85%D9%86%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%D8%8C%20%D9%88%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85." target="_blank" rel="noopener"><span data-en="WhatsApp">واتساب</span><b class="num">057 512 1111</b></a>
+      <a href="mailto:astol.almshri@gmail.com"><span data-en="Email">البريد</span><b class="lt">astol.almshri@gmail.com</b></a>
+      <a href="https://maps.app.goo.gl/hwgRQKzVVHDZBhS28" target="_blank" rel="noopener"><span data-en="Riyadh branch">فرع الرياض</span><b data-en="Al Nadwa, Riyadh">حي الندوة، الرياض</b></a>
+      <a href="https://maps.app.goo.gl/3X52dJmQrnJTdp8c9" target="_blank" rel="noopener"><span data-en="Dammam branch">فرع الدمام</span><b data-en="King Abdulaziz Port gate, Dammam">بوابة ميناء الملك عبدالعزيز، الدمام</b></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr fogf"><div class="wrap"><span data-en="© Projects OSTUL General Contracting Co.">© شركة أسطول المشاريع للمقاولات العامة</span><span data-en="Riyadh · Dammam, Saudi Arabia">الرياض · الدمام، المملكة العربية السعودية</span></div></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>window.__MAP={"C":{"riyadh":[575.7,386.1],"jeddah":[217.6,553.7],"makkah":[248,557.4],"madinah":[237.5,398.6],"dammam":[736.5,296.5],"jubail":[715.5,266.3],"tabuk":[92.9,195],"abha":[375,724],"jizan":[377.4,793.2],"hail":[336.5,239.8],"buraidah":[444.9,301.7],"najran":[452.5,762],"hofuf":[712.2,351.2],"yanbu":[163.8,418.4],"neom":[27.8,214.8]},"routes":["jeddah","makkah","madinah","dammam","jubail","tabuk","abha","jizan","hail","buraidah","najran","hofuf","yanbu"]};window.__SC=[{"id": "road", "n": 48}, {"id": "pipe", "n": 48}, {"id": "water", "n": 48}, {"id": "earth", "n": 48}];</script>
+<script>(function () {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasG = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+  if (hasG) { gsap.registerPlugin(ScrollTrigger); ScrollTrigger.config({ ignoreMobileResize: true }); }
+  const MOTION = hasG && !RM;
+  const cl = v => Math.max(0, Math.min(1, v)), sm = t => t * t * (3 - 2 * t);
+  const app = $('#app');
+
+  /* language */
+  $$('[data-en]').forEach(el => el.dataset.ar = el.innerHTML);
+  let lang = 'ar'; const afterLang = [];
+  function setLang(l, first) {
+    lang = l;
+    $$('[data-en]').forEach(el => el.innerHTML = l === 'en' ? el.dataset.en : el.dataset.ar);
+    app.dir = l === 'en' ? 'ltr' : 'rtl'; app.lang = l; document.documentElement.lang = l; document.documentElement.dir = app.dir;
+    $('#lang').textContent = l === 'en' ? 'ع' : 'EN';
+    $('#lang').setAttribute('aria-label', l === 'en' ? 'التبديل إلى العربية' : 'Switch to English');
+    document.title = l === 'en' ? 'Projects OSTUL' : 'أسطول المشاريع';
+    try { localStorage.setItem('ostul-lang', l); } catch (e) { }
+    afterLang.forEach(f => f());
+    if (!first && hasG) ScrollTrigger.refresh();
+  }
+  $('#lang').addEventListener('click', () => setLang(lang === 'ar' ? 'en' : 'ar'));
+  const split = el => { el.innerHTML = el.textContent.trim().split(/\s+/).map(t => `<span class="w">${t}</span>`).join(' '); return $$('.w', el); };
+  let W = {};
+  afterLang.push(() => { W = { say: split($('#say')), wins: $$('.win .cap-t').map(split) }; if (window.__drawFilm) window.__drawFilm(); });
+
+  /* smooth scroll */
+  let lenis = null;
+  if (!RM && typeof Lenis !== 'undefined' && matchMedia('(pointer: fine)').matches) {
+    lenis = new Lenis({ lerp: .09, wheelMultiplier: .9, smoothWheel: true });
+    if (hasG) { lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0); }
+  }
+  const root = document.documentElement, burger = $('#burger'), menu = $('#menu');
+  const setMenu = on => { root.classList.toggle('menu-open', on); burger.setAttribute('aria-expanded', on); menu.setAttribute('aria-hidden', !on); if (lenis) on ? lenis.stop() : lenis.start(); document.body.style.overflow = on ? 'hidden' : ''; };
+  burger.addEventListener('click', () => setMenu(!root.classList.contains('menu-open')));
+  addEventListener('keydown', e => { if (e.key === 'Escape') { setMenu(false); $$('.dd.open').forEach(d => d.classList.remove('open')); } });
+  $$('.dd > button').forEach(b => b.addEventListener('click', () => { const d = b.parentElement, on = !d.classList.contains('open'); $$('.dd.open').forEach(x => x.classList.remove('open')); d.classList.toggle('open', on); b.setAttribute('aria-expanded', on); }));
+  document.addEventListener('click', e => { if (!e.target.closest('.dd')) $$('.dd.open').forEach(x => x.classList.remove('open')); });
+  const goTo = id => { const el = document.getElementById(id); if (!el) return; const y = id === 'top' ? 0 : el.getBoundingClientRect().top + scrollY - 76; const fix = () => { const y2 = id === 'top' ? 0 : el.getBoundingClientRect().top + scrollY - 76; if (Math.abs(y2 - scrollY) > 4) lenis ? lenis.scrollTo(y2, { duration: .6 }) : scrollTo({ top: y2, behavior: 'smooth' }); };
+    lenis ? lenis.scrollTo(y, { duration: 1.6, onComplete: fix }) : (scrollTo({ top: y, behavior: RM ? 'auto' : 'smooth' }), setTimeout(fix, 900)); };
+  $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href').slice(1); if (!id) return; e.preventDefault(); $$('.dd').forEach(x => { x.classList.remove('open'); x.classList.add('shut'); setTimeout(() => x.classList.remove('shut'), 700); }); const wasOpen = root.classList.contains('menu-open'); setMenu(false); setTimeout(() => goTo(id), wasOpen ? 60 : 0); }));
+  /* mark where we are in the bar */
+  const navMap = { top: ['film', 'intro'], about: ['about', 'lead', 'milestones'], services: ['services'], work: ['work'], quality: ['quality'], map: ['map', 'partners'], contact: ['contact'] };
+  const markNav = () => { const mid = innerHeight * .35; let cur = 'top';
+    for (const [k, ids] of Object.entries(navMap)) for (const id of ids) { const el = document.getElementById(id); if (!el) continue; const r = el.getBoundingClientRect(); if (r.top < mid && r.bottom > mid) cur = k; }
+    $$('.nav [data-k]').forEach(n => n.classList.toggle('on', n.dataset.k === cur)); };
+  addEventListener('scroll', markNav, { passive: true }); markNav();
+
+  /* ============ the film: one continuous journey, scrubbed by the scroll ============ */
+  const SC = window.__SC, N = SC.length, G = 4;
+  const HD = matchMedia('(min-width: 1000px) and (pointer: fine)').matches;
+  const PORT = !HD && matchMedia('(max-aspect-ratio: 3/4)').matches;   // phones: sharp portrait crops cut around each scene's focus
+  const A = SC.map(s => new Array(Math.ceil(s.n / G)));
+  const ok = (si, k) => { const im = A[si][Math.floor(k / G)]; return im && im.complete && im.naturalWidth; };
+  function frame(si, k) { const n = SC[si].n; k = Math.max(0, Math.min(n - 1, Math.round(k))); let j = k; while (j >= 0 && !ok(si, j)) j--; if (j < 0) { j = k; while (j < n && !ok(si, j)) j++; if (j >= n) return null; } return { im: A[si][Math.floor(j / G)], r: j % G }; }
+  let queued = false; const want = () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; paint(); }); } };
+  const started = new Array(N).fill(false); const FIRST = []; const first = si => new Promise(r => FIRST[si] = r);
+  function load(si) {
+    if (started[si]) return Promise.resolve(); started[si] = true;
+    const n = A[si].length; let left = n;
+    const ord = []; for (let st = n; st >= 1; st = st >> 1) for (let a = 0; a < n; a += st) if (!ord.includes(a)) ord.push(a);
+    return new Promise(res => { for (const a of ord) { const im = new Image(); im.decoding = 'async'; im.onload = im.onerror = () => { if (a === 0 && FIRST[si]) FIRST[si](); want(); if (--left === 0) res(); }; im.src = `assets/${HD ? 'f3h' : PORT ? 'f3p' : 'f3m'}/${SC[si].id}/a${String(a).padStart(2, '0')}.webp`; A[si][a] = im; } });
+  }
+  const c = $('#fc'), x = c.getContext('2d'), NIGHT = '#05070d';
+  const FX = { road: .6, pipe: .42, water: .34, earth: .52 };
+  const fit = () => { const r = Math.min(devicePixelRatio || 1, 2); c.width = c.clientWidth * r; c.height = c.clientHeight * r; };
+  function draw16(si, fr, a, zoom) {          // cover the screen, keeping each scene's subject in view
+    if (!fr || a <= 0) return; const im = fr.im, cw = c.width, ch = c.height, iw = im.naturalWidth, ih = im.naturalHeight / G, sy = fr.r * ih;
+    const s2 = Math.max(cw / iw, ch / ih) * zoom, w = iw * s2, h = ih * s2, fx = PORT ? .5 : (FX[SC[si].id] ?? .5);
+    const dx = Math.min(0, Math.max(cw - w, cw / 2 - w * fx));
+    x.globalAlpha = a; x.imageSmoothingQuality = 'high'; x.drawImage(im, 0, sy, iw, ih, dx, (ch - h) / 2, w, h); x.globalAlpha = 1;
+  }
+  /* the page's scroll drives the film: each clear window opens the next scene */
+  const wins = $$('.win'); let Y = [];
+  const anchors = () => { const vh = innerHeight; Y = [0, ...wins.map(w => w.getBoundingClientRect().top + scrollY - vh * .25), Math.max(document.documentElement.scrollHeight - vh, 1)]; };
+  let ready = false; const TR = .22;
+  function vOf(y) { for (let k = 0; k < N; k++) if (y < Y[k + 1] || k === N - 1) return k + cl((y - Y[k]) / Math.max(1, Y[k + 1] - Y[k])); return N - 1; }
+  function paint() {
+    if (!ready) return;
+    const v = Math.min(vOf(scrollY), N - 1e-4), i = Math.floor(v), u = v - i;
+    x.fillStyle = NIGHT; x.fillRect(0, 0, c.width, c.height);
+    const last = i === N - 1, run = last ? 1 : 1 - TR, fu = cl(u / run);
+    const kf = fu * (SC[i].n - 1), k0 = Math.floor(kf), kt = kf - k0; draw16(i, frame(i, k0), 1, 1 + fu * .05); if (kt > .04 && k0 + 1 < SC[i].n && ok(i, k0 + 1) && ok(i, k0)) draw16(i, frame(i, k0 + 1), kt, 1 + fu * .05);
+    if (!last && u > run) { const t = sm((u - run) / TR); draw16(i + 1, frame(i + 1, 0), t, 1.06 - t * .06); }
+    if (W.wins) wins.forEach((w, k) => { const r = w.getBoundingClientRect(), vh = innerHeight, t = cl((vh * .9 - r.top) / (r.height * .55)), n = W.wins[k].length, lit = Math.round(t * n); W.wins[k].forEach((el, j) => el.classList.toggle('hi', j < lit)); });
+  }
+  window.__drawFilm = want;
+  addEventListener('scroll', want, { passive: true });
+  (async () => { const f0 = first(0); const all0 = load(0); await f0; ready = true; anchors(); fit(); want(); c.classList.add('on'); await all0; for (let k = 1; k < N; k++) await load(k); })();
+  addEventListener('resize', () => { fit(); anchors(); want(); }); fit();
+  addEventListener('load', () => { anchors(); want(); });
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(() => { anchors(); want(); }).observe(document.body);
+
+  /* looping project films: load near the screen, play only while seen */
+  const HDV = matchMedia('(min-width: 900px)').matches;
+  $$('video[data-v]').forEach(v => {
+    let set = false;
+    new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { if (!set) { set = true; v.src = `assets/vid/${v.dataset.v}-${HDV ? 'hd' : 'sd'}.mp4`; } if (!RM) { const p = v.play(); if (p) p.catch(() => { }); } }
+      else if (set) v.pause();
+    }), { rootMargin: '40% 0px' }).observe(v);
+  });
+  /* from the field: real photos */
+  const FD = ['G03', 'G06', 'G14', 'G24', 'G26', 'G29', 'G20', 'G05'], FW = { G03: 480, G06: 854, G14: 480, G24: 637, G26: 660, G29: 496, G20: 577, G05: 627 };
+  const fdRow = FD.map(g => `<img src="assets/w/s-${g}.webp" alt="" decoding="async" loading="lazy" width="${FW[g]}" height="640">`).join('');
+  $('#fd').innerHTML = fdRow + fdRow;
+  new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('run', e.isIntersecting))).observe($('#fd'));
+
+  /* partners */
+  const PS = [[432,84],[341,148],[418,182],[280,202],[209,195],[219,75],[189,144],[252,192],[418,132],[299,128],[203,203],[145,139],[277,63],[268,93],[192,200],[129,169],[181,157],[223,146],[207,152],[145,150],[172,239],[214,156],[426,96],[241,85]];
+  const sc = matchMedia('(max-width:760px)').matches ? .72 : 1;
+  const logo = i => { const [w, h] = PS[i], ar = w / h; let lh = Math.sqrt(8200 / ar), lw = lh * ar; if (lh > 92) { lh = 92; lw = lh * ar; } if (lw > 230) { lw = 230; lh = lw / ar; } return `<span class="pl"><img src="assets/partners/pt${String(i + 1).padStart(2, '0')}.webp" alt="" decoding="async" loading="lazy" width="${Math.round(lw * sc)}" height="${Math.round(lh * sc)}"></span>`; };
+  const rA = PS.slice(0, 12).map((_, i) => logo(i)).join(''), rB = PS.slice(12).map((_, i) => logo(i + 12)).join('');
+  $('#marq').innerHTML = `<div class="t">${rA + rA}</div><div class="t b">${rB + rB}</div>`;
+  new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('run', e.isIntersecting))).observe($('#marq'));
+
+  /* map routes */
+  const MAP = window.__MAP, NS = 'http://www.w3.org/2000/svg', routes = [];
+  if (MAP) {
+    const [hx, hy] = MAP.C.riyadh;
+    MAP.routes.forEach((n, i) => {
+      const [px, py] = MAP.C[n], dx = px - hx, dy = py - hy, len = Math.hypot(dx, dy), b = (i % 2 ? 1 : -1) * len * .18;
+      const path = document.createElementNS(NS, 'path'); path.setAttribute('d', `M${hx},${hy} Q${(hx + px) / 2 - dy / len * b},${(hy + py) / 2 + dx / len * b} ${px},${py}`); path.setAttribute('class', 'route');
+      const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('cx', px); dot.setAttribute('cy', py); dot.setAttribute('r', 4); dot.setAttribute('class', 'rdot');
+      const pulse = document.createElementNS(NS, 'circle'); pulse.setAttribute('r', 3); pulse.setAttribute('class', 'pulse');
+      $('#routes').append(path, dot, pulse); const L = path.getTotalLength();
+      path.style.strokeDasharray = L; path.style.strokeDashoffset = MOTION ? L : 0; if (MOTION) dot.style.opacity = 0;
+      routes.push({ path, dot, pulse, L, o: Math.random() });
+    });
+  }
+  let mapRun = false, mapRaf = 0, mapDone = !MOTION;
+  const mapLoop = t => { mapRaf = 0; if (!mapRun) return; routes.forEach(r => { if (!mapDone) { r.pulse.style.opacity = 0; return; } const f = ((t / 2600) + r.o) % 1, pt = r.path.getPointAtLength(f * r.L); r.pulse.setAttribute('cx', pt.x); r.pulse.setAttribute('cy', pt.y); r.pulse.style.opacity = Math.sin(f * Math.PI); }); mapRaf = requestAnimationFrame(mapLoop); };
+  if (!RM) new IntersectionObserver(es => es.forEach(e => { mapRun = e.isIntersecting; if (mapRun && !mapRaf) mapRaf = requestAnimationFrame(mapLoop); })).observe($('#map'));
+
+  /* header: clear over the opening film, white once the page begins */
+  const hdr = $('#hdr'), film = $('#film');
+  const hdrCheck = () => hdr.classList.toggle('lite', film.getBoundingClientRect().bottom < 80);
+  addEventListener('scroll', hdrCheck, { passive: true }); hdrCheck();
+
+  const saved = (() => { try { return localStorage.getItem('ostul-lang'); } catch (e) { return null; } })();
+  setLang(saved === 'en' ? 'en' : 'ar', true);
+
+  if (!MOTION) { document.documentElement.classList.add('still'); want(); return; }
+  document.documentElement.classList.add('motion');
+
+  /* opening */
+  gsap.from('.hdr .in', { y: -20, opacity: 0, duration: 1.2, delay: .3, ease: 'expo.out' });
+  /* the opening: logo, name and title arrive slowly */
+  gsap.from('.hero-logo', { opacity: 0, scale: .94, duration: 2, delay: .3, ease: 'power3.out' });
+  gsap.from('.hero-name', { opacity: 0, y: 12, duration: 1.8, delay: .7, ease: 'power3.out' });
+  gsap.from('#h1', { opacity: 0, y: 16, filter: 'blur(8px)', duration: 2, delay: 1.1, ease: 'power3.out' });
+  /* the sheet */
+  ScrollTrigger.create({ trigger: '#say', start: 'top 80%', end: 'bottom 50%', scrub: true, onUpdate: s => { const k = Math.round(s.progress * W.say.length); W.say.forEach((w, i) => w.classList.toggle('hi', i < k)); } });
+  const up = (el, trig, o = {}) => gsap.from(el, Object.assign({ y: 34, opacity: 0, duration: 1.3, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: trig, start: 'top 84%' } }, o));
+  ['#about', '#work', '#quality', '#lead', '#milestones', '#map', '#partners'].forEach(id => up(`${id} .eyebrow, ${id} .h2`, id));
+  up('.ab-lead, .ab-p', '.ab-tx'); up('.ab-ph', '.ab-in', { y: 50 }); up('.vm > div', '.vm', { stagger: .1 });
+  up('.sv-top > *', '.sv-top');
+  $$('.svc-head').forEach(h => up(h.children, h, { stagger: .08 }));
+  $$('.cards').forEach(c => up(c.children, c, { stagger: .1 }));
+  up('.stats div', '.stats', { stagger: .1 });
+  $$('.pj').forEach(p => up(p.children, p, { stagger: .1 }));
+  up('.vals > div', '.vals', { stagger: .1 }); up('.creds > div', '.creds', { stagger: .1 });
+  $$('.msg').forEach(m => { up(m.querySelector('.msg-ph'), m, { y: 40 }); up(m.querySelectorAll('.msg-tx > *'), m, { stagger: .08 }); });
+  up('.team h3, .team li', '.team', { stagger: .05 }); up('.tl li', '.tl', { stagger: .1 });
+  ScrollTrigger.create({ trigger: '#map', start: 'top 70%', end: 'center 45%', scrub: true, onUpdate: s => { mapDone = s.progress > .97; routes.forEach((r, i) => { const t = cl(s.progress * 1.5 - i * .04); r.path.style.strokeDashoffset = r.L * (1 - t); r.dot.style.opacity = t > .98 ? 1 : 0; }); } });
+  up('.ct-logo, .ct-h, .ct-sub', '.contact', { stagger: .1 }); up('.ct-lines a', '.ct-lines', { stagger: .08 });
+
+  let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => ScrollTrigger.refresh(), 200); });
+  ScrollTrigger.refresh();
+})();
+</script>
+</body>
+</html>
